@@ -1,0 +1,450 @@
+*{
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+    user-select: none;
+}
+
+header{
+    background-color: #e6e6e6;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    font-family: 'Sofia', cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-right: 10%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.icon-logo{
+    position: relative;
+    font-size: 3rem;
+    top: 2px;
+}
+
+.header__list{
+    display: flex;
+}
+
+.header__list-item{
+    font-size: 1.3rem;
+    padding: 0 10px;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.header__list-item-nav{
+    text-decoration: none;
+    color: #000;
+}
+
+.header__list-item + .header__list-item{
+    border-left: 2px solid #999;
+}
+
+.header__list-item-subnav{
+    position: relative;
+}
+
+
+
+.sub-header__list{
+    position: absolute;
+    display: none;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    min-width: 260px;
+    font-size: 1.6rem;
+    background: #fff;
+    padding: 0 10px 20px;
+    list-style: none;
+    margin-top: 10px;
+    right: 0;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.sub-header__list::before{
+    content: "";
+    display: block;
+    position: absolute;
+    border-bottom: 10px solid transparent;
+    width: 50px;
+    right: 0;
+    top: -10px;
+}
+
+@keyframes topToBottom{
+    from{
+        top: -0.5rem;
+        /* transform: translateY(-80px); */
+        opacity: 0;
+    }
+    to{
+        top: 1.8rem;
+        /* transform: translateY(-10px); */
+        opacity: 1;
+    }
+}
+
+.sub-header__list-subitem{
+    display: block;
+    text-decoration: none;
+    color: #999;
+    width: 100%;
+    transition: ease-in 0.2s;
+    padding: 5px;
+}
+
+/* sub header */
+nav{
+    position: relative;
+}
+
+.header-nav{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav__list{
+    
+    display: flex;
+    font-size: 1.8rem;
+    list-style: none;
+}
+
+
+.header-nav__list-item-subnav{
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    padding: 5px 20px;
+    /* background-color: rosybrown; */
+    cursor: pointer;
+}
+
+.header-subnav__list{
+    position: absolute;
+    display: flex;
+    position: absolute;
+    background-color: green;
+}
+
+.header-nav__sub-header{
+    position: absolute;
+    background-color: #fff;
+    font-size: 1.6rem;
+    right: 0;
+    left: 0;
+    top: 125%;
+    display: none;
+    /* box-shadow: 0 20px 600px 0px rgba( 0, 0, 0, .1); */
+    padding-bottom: 5rem;
+    z-index: 1;
+}
+
+.header-nav__list-item-subnav::after{
+    content: "";
+    display: none;
+    position: absolute;
+    border-bottom: 20px solid transparent;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+
+.subheader-nav__list-item{
+    padding: 5px 0;
+    font-size: 1.4rem;
+    color: #888;
+}
+
+.subheader-nav__lists{
+    display: flex;
+}
+
+.subheader-nav__list{
+    list-style: none;
+    background-color: #fff;
+    color: #666;
+    user-select: none;
+}
+
+.header-nav__tools-search{
+    font-size: 2rem;
+    width: 200px;
+    border-radius: 50px;
+    padding: 5px 0 5px 50px;
+    border: none;
+    background-color: #f5f5f5;
+    outline: none;
+}
+
+/* .logo-icon-search{
+    display: inline-block;
+    position: relative;
+    left: 35px;
+    font-size: 2rem;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+} */
+
+.logo-icon{
+    font-size: 2rem;
+    text-align: center;
+    color: #777;
+    cursor: pointer;
+}
+
+.logo-icon-tools{
+    margin-left: 17px;
+}
+
+/* ------------------ Hover ------------------ */
+.sub-header__list-subitem:hover, 
+.header-nav__list-item-subnav:hover{
+    opacity: 0.6;
+}
+
+.header__list-item:hover .header__list-item-nav {
+    color: #999;
+}
+
+.header__logo:hover{
+    color: #666;
+}
+.logo-icon-search:hover{
+    color: #000;
+}
+
+.logo-icon-tools:hover{
+    color: #000;
+}
+
+.header__list-item:hover  .sub-header__list{
+    display: block;
+    animation: topToBottom ease-in 0.3s;
+}
+
+.header-nav__list-item:hover  .header-nav__sub-header,
+.header-nav__list-item:hover  .header-nav__list-item-subnav::after
+{
+    display: block;
+}
+
+.header-nav__list-item:hover {
+    border-bottom: 2px black solid;
+
+}
+
+.header-nav__list-item:hover .subheader-nav__list{
+    display: block;
+    animation: topToBottom ease-in 0.6s;
+
+}
+
+.subheader-nav__list-item:hover .item{
+    opacity: 0.6;
+}
+/* ----------------------------------------- */
+/* .slider{
+    
+}
+ */
+
+.slider-img{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 100%;
+    min-width: 60%;
+    height: 92vh;
+}
+
+.slider-position{
+    position: absolute;
+}
+
+.slider-name{
+    height: 90vh;
+}
+
+.name-shop{
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    position: relative;
+    color: red;
+    font-size: 7em;
+    top: 25vh;
+    left: 10vw;
+    width: 40vw;
+}
+
+
+.description-name{
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    /* flex-wrap: wrap; */
+    position: relative;
+    color: red;
+    font-size: 2em;
+    top: 25vh;
+    margin-bottom: 25px;
+    left: 10vw;
+    width: 30vw;
+}
+
+.button-shop{
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    position: relative;
+    color: red;
+    font-size: 3em;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    top: 25vh;
+    left: 10vw;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.2s;
+    /* border: 1px red solid; */
+    /* background-color: rgb(5, 5, 5); */
+    /* box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff; */
+
+}
+
+
+.button-shop:hover{
+    color: rgb(70, 1, 1);
+    background-color: red;
+    box-shadow: 0 0 10px red, 0 0 40px red, 0 0 80px red;
+    transition-delay: 1s;
+    border: none;
+}
+
+.button-shop  span{
+    position: absolute;
+    display: block;
+    /* background-color: royalblue; */
+}
+
+.button-shop  span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, red);
+}
+
+.button-shop:hover span:nth-child(1){
+    left:  100%;
+    transition: 1s;
+}
+
+.button-shop  span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, red);
+}
+
+.button-shop:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.button-shop  span:nth-child(2){
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, red);
+}
+
+.button-shop:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button-shop  span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, red);
+}
+
+.button-shop:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.slider-content{
+    font-size: 5rem;
+    text-align: center;
+    /* padding: 10px 0 ; */
+}
+
+.description-content{
+    line-height: 1.5;
+    color: #111;
+    font-weight: 200;
+    font-size: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.description-title{
+    font-weight: 1000;
+    padding: 6px 0 25px 0;
+    font-size: 72px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.slider-description{
+    padding: 40px 0 120px 0;
+}
+
+.button-href{
+    text-decoration: none;
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.button-href:hover{
+    background: rgb(167, 166, 166);
+}
+
+.slider-featured{
+    text-align: left;
+    line-height: 1.75;
+    min-height: 1px;
+    font-weight: 20;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.grid-1 > .slider-content__page{
+    -ms-flex: 1;
+    flex: 1;
+}

@@ -1,0 +1,165 @@
+.modal{
+    position: fixed;
+    background: rgba(136, 136, 136, 0.58);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.modal__logo{
+    display: block;
+    align-items: center;
+}
+
+.ti-bag{
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    cursor: default;
+    text-transform: uppercase;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal .modal-container {
+    background: #fff;
+    width: 25vw;
+    transform: translateY(calc(100% - 50%));
+    animation: Facein ease .5s;
+    margin: 0 auto;
+}
+
+.modal .modal-container__register {
+    background: #fff;
+    width: 25vw;
+    transform: translateY(calc(100% - 88%));
+    animation: Facein ease .5s;
+    margin: 0 auto;
+}
+
+.modal-container__register .modal-close{
+    float: right;
+    padding: 8px 16px;
+    color: #fff;
+}
+
+.modal-container__register, .modal-header{
+    border-radius: 5px;
+}
+
+.modal-container__register .modal-header{
+    padding: 32px 0 0 0;
+    text-align: center;
+    font-size: 24px;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+.modal-container__register .modal-body{
+    margin: 25px 80px 0 80px;
+}
+
+.modal-container .modal-close{
+    float: right;
+    padding: 8px 16px;
+    color: #fff;
+}
+
+.modal-container, .modal-header{
+    border-radius: 5px;
+}
+
+.modal-container .modal-header{
+    padding: 32px 0 0 0;
+    text-align: center;
+    font-size: 24px;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+.modal-header .icon-bag{
+    margin-right: 5px;
+}
+
+.modal-container .modal-body{
+    margin: 25px 80px 0 80px;
+}
+
+.modal-body .modal-label{
+    display: block;
+}
+
+.modal-body .modal-input{
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+}
+
+.modal-body .pay-tickets{
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.pay-tickets:hover{
+    background: rgb(224, 224, 224);
+    color: #000;
+}
+
+.modal-forgot__password{
+    text-decoration: none;
+    color: rgb(161, 161, 161);
+    float: right;
+    padding: 0 0 15px 0;
+    font-size: 14px;
+}
+
+.modal-register{
+    display:block;
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    text-align: center;
+    padding: 5px 0 25px 0;
+    margin: 15px 0 0 0;
+    cursor: default;
+}
+
+.modal-link-form{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+
+.modal-link-form:hover{
+    color: rgb(126, 126, 126);
+}
+
+@keyframes Facein{
+    from{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(cal(100% - 50%));
+        opacity: 1;
+    }
+}

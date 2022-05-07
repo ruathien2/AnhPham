@@ -1,9 +1,10 @@
 import logo from './logo.svg';
-import Header from './Header.jsx';
-import Nav_menu from './Nav_menu.jsx';
-import Slider from './Slider.jsx';
+import Header from './Header.js';
+import Nav_menu from './Nav_menu.js';
+import Slider from './Slider.js';
 import Modal_login from './Modal_login';
 import Modal_register from './Modal_register';
+import Footer from './Footer.js';
 import './assets/css/heading.css';
 import './assets/css/base.css';
 import './assets/css/modal.css';
@@ -16,6 +17,7 @@ function App() {
       <Header/>
       <Nav_menu/>
       <Slider/>
+      <Footer/>
     </div>
   );
 }

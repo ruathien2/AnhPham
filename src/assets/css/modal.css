@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     user-select: none;
+    z-index: 1;
 }
 
 .modal__logo{
@@ -44,10 +45,15 @@
     margin: 0 auto;
 }
 
-.modal-container__register .modal-close{
+.modal-container__register .modal-close,
+.modal-container .modal-close{
     float: right;
     padding: 8px 16px;
+    background-color: red;
     color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .modal-container__register, .modal-header{
@@ -65,12 +71,6 @@
 
 .modal-container__register .modal-body{
     margin: 25px 80px 0 80px;
-}
-
-.modal-container .modal-close{
-    float: right;
-    padding: 8px 16px;
-    color: #fff;
 }
 
 .modal-container, .modal-header{

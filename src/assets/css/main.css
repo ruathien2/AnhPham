@@ -450,3 +450,60 @@ nav{
     -ms-flex: 1;
     flex: 1;
 }
+
+#footer {
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    padding: 50px 0;
+    font-family: "Nike Futura","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto
+}
+
+.container-title{
+    display:inline-flex;
+}
+
+.container-title-ul{
+    margin: 10px 25px;
+    list-style:  none;
+    font-size: 1.2rem;
+}
+
+.container-title>.container-title-ul>.container-title-ul-li{
+    padding: 10px;
+}
+
+.container-icon{
+    display: inline-flex;
+}
+
+.container-icon>.container-title-ul{
+    display: flex;
+}
+
+.container-icon>.container-title-ul>.container-title-ul-li{
+    margin: 0 10px;
+}
+
+.footer-title{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer-des{
+    color: rgb(131, 131, 131);
+    cursor: pointer;
+}
+
+.footer-des:hover{
+    color: #fff;
+}

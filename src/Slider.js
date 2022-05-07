@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState, useEffect} from 'react'
 import './assets/css/heading.css';
 import './assets/css/base.css';
 import './assets/font/fontawesome-free-5.15.4-web/css/all.min.css';
@@ -7,6 +7,25 @@ import sport from './assets/img/silder/fashion-football.jpg';
 import gym from './assets/img/silder/Asset 1.png';
 
 function Slider() {
+
+    const [goToTop, setGoToTop] = useState(false)
+
+    useEffect (() => {
+       const handleGoToTop = () => {
+           if(window.scrollY >= 200){
+               setGoToTop(true);
+           }else{
+               setGoToTop(false);
+           }
+       }
+
+        window.addEventListener('scroll', handleGoToTop)
+
+        return () => {
+            window.removeEventListener('scroll', handleGoToTop)
+        }
+    })
+
   return (
     <div className="slider">
          <div className="slider-title">
@@ -45,7 +64,26 @@ function Slider() {
                 <img src={gym} alt="" className="slider-img"/>
             </div>
         </div>
-
+        {goToTop && (
+            <button
+                style={{
+                    position: 'fixed',
+                    right: 20,
+                    bottom: 20,
+                    background: 'red',
+                    border: 'none',
+                    padding: 10,
+                    borderRadius: 40,
+                    color: '#fff', 
+                    cursor: 'pointer',
+                    zIndex: 1
+                }}
+                onClick = {() => setGoToTop(window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                }))}
+            >Top</button>
+        )}
         
     </div>
   )

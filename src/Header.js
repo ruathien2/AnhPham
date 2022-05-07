@@ -1,9 +1,16 @@
 import React from 'react';
+import {useState} from 'react'
 import './assets/css/heading.css';
 import './assets/css/base.css';
 import './assets/font/fontawesome-free-5.15.4-web/css/all.min.css'
+import Modal_register from './Modal_register';
+import Modal_login from './Modal_login';
 
 function Header() {
+
+    const [showRegister, setShowRegister] = useState(false)
+    const [showLogin, setShowLogin] = useState(false)
+
   return (
     <header>
         <div className="grid">
@@ -24,8 +31,10 @@ function Header() {
                             <li className="sub-header__list-item"><a href="#" className="sub-header__list-subitem">Send Us Feedback</a></li>
                         </ul>
                     </li>
-                    <li className="header__list-item"><a href="#" className="header__list-item-nav">Join Us</a></li>
-                    <li className="header__list-item"><a href="#" className="header__list-item-nav">Sign In</a></li>
+                    <li className="header__list-item"><a href="#" className="header__list-item-nav" onClick={() => setShowRegister(!showRegister)}>Join Us</a></li>
+                    {showRegister && <Modal_register closeRegister={setShowRegister}/>}
+                    <li className="header__list-item"><a href="#" className="header__list-item-nav" onClick = {() => setShowLogin(!showLogin)}>Sign In</a></li>
+                    {showLogin && <Modal_login closeLogin={setShowLogin}/>}
                 </ul>
             </div>
         </div>
